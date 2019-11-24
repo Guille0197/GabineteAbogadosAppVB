@@ -36,8 +36,9 @@ Partial Class index
         Me.Button4 = New System.Windows.Forms.Button()
         Me.btnAddAsunto = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
-        Me.BtnAsuntos = New System.Windows.Forms.Button()
+        Me.BtnListAsuntos = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.MenuVertical.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.BarraTitulo.SuspendLayout()
@@ -46,18 +47,17 @@ Partial Class index
         CType(Me.BtnMini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuVertical
         '
         Me.MenuVertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.MenuVertical.Controls.Add(Me.btnAddProcurador)
+        Me.MenuVertical.Controls.Add(Me.Panel2)
         Me.MenuVertical.Controls.Add(Me.Button1)
         Me.MenuVertical.Controls.Add(Me.Button5)
         Me.MenuVertical.Controls.Add(Me.Button4)
-        Me.MenuVertical.Controls.Add(Me.btnAddAsunto)
         Me.MenuVertical.Controls.Add(Me.btnHome)
-        Me.MenuVertical.Controls.Add(Me.BtnAsuntos)
         Me.MenuVertical.Controls.Add(Me.Panel1)
         Me.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuVertical.Location = New System.Drawing.Point(0, 0)
@@ -144,9 +144,9 @@ Partial Class index
         Me.btnAddProcurador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddProcurador.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddProcurador.ForeColor = System.Drawing.Color.White
-        Me.btnAddProcurador.Image = Global.GabineteAbogadosApp.My.Resources.Resources.close
+        Me.btnAddProcurador.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_scales_32px
         Me.btnAddProcurador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddProcurador.Location = New System.Drawing.Point(0, 354)
+        Me.btnAddProcurador.Location = New System.Drawing.Point(5, 108)
         Me.btnAddProcurador.Name = "btnAddProcurador"
         Me.btnAddProcurador.Size = New System.Drawing.Size(250, 40)
         Me.btnAddProcurador.TabIndex = 5
@@ -201,9 +201,9 @@ Partial Class index
         Me.btnAddAsunto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddAsunto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddAsunto.ForeColor = System.Drawing.Color.White
-        Me.btnAddAsunto.Image = Global.GabineteAbogadosApp.My.Resources.Resources.close
+        Me.btnAddAsunto.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_add_file_32px_1
         Me.btnAddAsunto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddAsunto.Location = New System.Drawing.Point(0, 308)
+        Me.btnAddAsunto.Location = New System.Drawing.Point(5, 62)
         Me.btnAddAsunto.Name = "btnAddAsunto"
         Me.btnAddAsunto.Size = New System.Drawing.Size(250, 40)
         Me.btnAddAsunto.TabIndex = 3
@@ -214,7 +214,7 @@ Partial Class index
         '
         Me.btnHome.FlatAppearance.BorderSize = 0
         Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHome.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHome.Font = New System.Drawing.Font("Arial Rounded MT Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHome.ForeColor = System.Drawing.Color.White
         Me.btnHome.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_home_filled_32px
         Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -225,20 +225,20 @@ Partial Class index
         Me.btnHome.Text = "Inicio"
         Me.btnHome.UseVisualStyleBackColor = True
         '
-        'BtnAsuntos
+        'BtnListAsuntos
         '
-        Me.BtnAsuntos.FlatAppearance.BorderSize = 0
-        Me.BtnAsuntos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAsuntos.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAsuntos.ForeColor = System.Drawing.Color.White
-        Me.BtnAsuntos.Image = Global.GabineteAbogadosApp.My.Resources.Resources.close
-        Me.BtnAsuntos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAsuntos.Location = New System.Drawing.Point(0, 262)
-        Me.BtnAsuntos.Name = "BtnAsuntos"
-        Me.BtnAsuntos.Size = New System.Drawing.Size(250, 40)
-        Me.BtnAsuntos.TabIndex = 1
-        Me.BtnAsuntos.Text = "Lista Asuntos"
-        Me.BtnAsuntos.UseVisualStyleBackColor = True
+        Me.BtnListAsuntos.FlatAppearance.BorderSize = 0
+        Me.BtnListAsuntos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnListAsuntos.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnListAsuntos.ForeColor = System.Drawing.Color.White
+        Me.BtnListAsuntos.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_grid_32px
+        Me.BtnListAsuntos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnListAsuntos.Location = New System.Drawing.Point(5, 16)
+        Me.BtnListAsuntos.Name = "BtnListAsuntos"
+        Me.BtnListAsuntos.Size = New System.Drawing.Size(250, 40)
+        Me.BtnListAsuntos.TabIndex = 1
+        Me.BtnListAsuntos.Text = "Lista Asuntos"
+        Me.BtnListAsuntos.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -249,6 +249,17 @@ Partial Class index
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.BtnListAsuntos)
+        Me.Panel2.Controls.Add(Me.btnAddProcurador)
+        Me.Panel2.Controls.Add(Me.btnAddAsunto)
+        Me.Panel2.Location = New System.Drawing.Point(-5, 263)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(261, 184)
+        Me.Panel2.TabIndex = 6
         '
         'index
         '
@@ -271,6 +282,7 @@ Partial Class index
         CType(Me.BtnMini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -282,7 +294,7 @@ Partial Class index
     Friend WithEvents btnClose As PictureBox
     Friend WithEvents BtnMini As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents BtnAsuntos As Button
+    Friend WithEvents BtnListAsuntos As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents btnAddAsunto As Button
@@ -291,4 +303,5 @@ Partial Class index
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents btnAddProcurador As Button
+    Friend WithEvents Panel2 As Panel
 End Class

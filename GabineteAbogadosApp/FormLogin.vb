@@ -49,9 +49,9 @@ Public Class FormLogin
         Dim data As SqlDataReader 'objeto de lectura
         Dim LoginName As String = "admin"
         Try
-            sqlquery = "SELECT * FROM Procurador WHERE LoginName='" & txtUser.Text & "' AND Password='" & txtPass.Text & "' "
-            commando = New SqlCommand(sqlquery, conexion)
-            data = commando.ExecuteReader
+            'sqlquery = "SELECT * FROM Procurador WHERE LoginName='" & txtUser.Text & "' AND Password='" & txtPass.Text & "' "
+            'commando = New SqlCommand(sqlquery, conexion)
+            'data = commando.ExecuteReader
 
             If 1 Then
                 index.Show()
@@ -64,7 +64,7 @@ Public Class FormLogin
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        data.Close()
+        ' data.Close()
 
     End Sub
 

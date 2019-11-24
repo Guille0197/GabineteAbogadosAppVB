@@ -14,8 +14,8 @@
 
     End Sub
 
-    Private Sub BtnAsuntos_Click(sender As Object, e As EventArgs) Handles BtnAsuntos.Click
-
+    Private Sub BtnAsuntos_Click(sender As Object, e As EventArgs) Handles BtnListAsuntos.Click
+        openChildForm(New list_Asuntos())
     End Sub
 
     Private currentForm As Form = Nothing
