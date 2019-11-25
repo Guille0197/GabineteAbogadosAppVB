@@ -22,7 +22,7 @@ Public Class add_Procurador
             data = commando.ExecuteReader
             While (data.Read())
                 conta = conta + 1
-                DataGridViewProcurador.Rows.Add(conta, data("DNI"), data("FirstName"), data("LastName"), data("telephone"), data("Email")) 'se pone lo que esta en la BD
+                DataGridViewProcurador.Rows.Add(conta, data("DNI"), data("nombre"), data("email"), data("telefono")) 'se pone lo que esta en la BD
             End While
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -36,11 +36,11 @@ Public Class add_Procurador
         Dim commando As New SqlCommand 'Objeto de comando
 
         Try
-            If txt_cedula.Text = "" Or txt_nombre.Text = "" Or txt_apellido.Text = "" Or txt_email.Text = "" Or txt_telefono.Text = "" Then
+            If txt_cedula.Text = "" Or txt_nombre.Text = "" Or txt_email.Text = "" Or txt_telefono.Text = "" Then
                 MsgBox("Para registar ingrese los datos en los campos requeridos")
             Else
-                sqlquery = "INSERT INTO Procurador (DNI, FirstName, LastName, telephone, Email)
-                VALUES('" & txt_cedula.Text & "', '" & txt_nombre.Text & "', '" & txt_apellido.Text & "', '" & txt_telefono.Text & "', '" & txt_email.Text & "')"
+                sqlquery = "INSERT INTO Procurador (DNI, nombre, email, telefono)
+                VALUES('" & txt_cedula.Text & "', '" & txt_nombre.Text & "', '" & txt_email.Text & ", '" & txt_telefono.Text & "' ')"
 
                 commando = New SqlCommand(sqlquery, conexion)
                 commando.ExecuteNonQuery() ' Actualiza la BD
@@ -49,7 +49,6 @@ Public Class add_Procurador
                 'Limpiando
                 txt_cedula.Clear()
                 txt_nombre.Clear()
-                txt_apellido.Clear()
                 txt_telefono.Clear()
                 txt_email.Clear()
 
@@ -80,10 +79,9 @@ Public Class add_Procurador
             data.Read()
 
             txt_cedula.Text = data("DNI")
-            txt_nombre.Text = data("FirstName")
-            txt_apellido.Text = data("LastName")
-            txt_telefono.Text = data("telephone")
-            txt_email.Text = data("Email")
+            txt_nombre.Text = data("nombre")
+            txt_telefono.Text = data("telefono")
+            txt_email.Text = data("email")
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -112,7 +110,6 @@ Public Class add_Procurador
                 'Limpiando
                 txt_cedula.Clear()
                 txt_nombre.Clear()
-                txt_apellido.Clear()
                 txt_telefono.Clear()
                 txt_email.Clear()
             End If
@@ -130,10 +127,9 @@ Public Class add_Procurador
                 MsgBox("Para actualizar ingrese el número de cédula en el campo requerido")
             Else
                 sqlquery = "UPDATE Procurador SET DNI = '" & txt_cedula.Text & "',
-                                         FirstName = '" & txt_nombre.Text & "',
-                                         LastName = '" & txt_apellido.Text & "',
-                                         Email = '" & txt_email.Text & "',
-                                         telephone = '" & txt_telefono.Text & "'
+                                         nombre = '" & txt_nombre.Text & "',
+                                         email = '" & txt_email.Text & "',
+                                         telefono = '" & txt_telefono.Text & "'
                 WHERE DNI = '" & txt_cedula.Text & "' "
                 commando = New SqlCommand(sqlquery, conexion)
                 commando.ExecuteNonQuery() ' Actualiza la BD
@@ -142,7 +138,6 @@ Public Class add_Procurador
                 'Limpiando
                 txt_cedula.Clear()
                 txt_nombre.Clear()
-                txt_apellido.Clear()
                 txt_telefono.Clear()
                 txt_email.Clear()
             End If
@@ -150,4 +145,5 @@ Public Class add_Procurador
             MsgBox(ex.Message)
         End Try
     End Sub
+
 End Class

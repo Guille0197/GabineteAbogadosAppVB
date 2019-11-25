@@ -15,21 +15,36 @@ Public Class add_Asunto
     End Sub
 
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
-        'MsgBox(dateInicio.Text)
+        'Registro cliente
+        Dim sqlquery As String
+        Dim commando As New SqlCommand
 
-        Dim sqlquery As String 'cadena centencia sql 
-        Dim commando As New SqlCommand 'Objeto de comando
+        'Registro Asunto
+        Dim sqlquerys As String
+        Dim commandos As New SqlCommand
 
         Try
             If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Then
                 MsgBox("Para registar ingrese los datos en los campos requeridos")
             Else
-                sqlquery = "INSERT INTO clientes (codigo, cedula, nombre, apellido, direccion, telefono, email, fechaInicio, fechaFin,tipoAsunto, estado)
-                VALUES('" & txtCodigo.Text & "','" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "', '" & TextBox6.Text & "', '" & dateInicio.Text & "', '" & dateFin.Text & "', '" & cmboxTipoAsunto.Text & "', '" & cmboxEstado.Text & "')"
+                'Registra el cliente
+                sqlquery = "INSERT INTO Cliente (cedula, nombre, apellido, direccion, telefono, email, codASunto)
+                VALUES('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "', '" & TextBox6.Text & "', '" & txtCodigo.Text & "')"
 
                 commando = New SqlCommand(sqlquery, conexion)
-                commando.ExecuteNonQuery() ' Actualiza la BD
+                commando.ExecuteNonQuery()
+
+                'Registra el asunto
+                sqlquerys = "INSERT INTO Asunto (CodigoExpediente, estado, fechaInicio, fechaFin, cliente, procurador, tipoAsunto)
+                VALUES('" & txtCodigo.Text & "', '" & cmboxEstado.Text & "', '" & dateInicio.Text & "', '" & dateFin.Text & "', '" & TextBox1.Text & "', '" & cmbBoxProcurador.Text & "', '" & cmboxTipoAsunto.Text & "')"
+
+                commandos = New SqlCommand(sqlquerys, conexion)
+                commandos.ExecuteNonQuery()
+
+
+
                 MsgBox("Agregando cliente satisfactoriamente...")
+                Me.Close()
 
                 'Limpiando
                 TextBox1.Clear()
@@ -46,6 +61,9 @@ Public Class add_Asunto
     End Sub
 
     Private Sub add_Asunto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LLenarTipoAsunto() 'llenar comboBox de BD
+        LLenarEstado() 'llenar comboBox de BD
+        LLenarProcurador()
 #Region "Generar un numero aleatorio para el codigo "
         ' Initialize the random-number generator.
         Randomize()
@@ -54,5 +72,61 @@ Public Class add_Asunto
         txtCodigo.Text = value.ToString
 #End Region
     End Sub
+
+#Region "LLenar ComboBox Tipo de Asunto BD"
+    Sub LLenarTipoAsunto()
+
+        Dim dt = New DataTable
+        Dim dat = New SqlDataAdapter
+        Try
+            dat = New SqlDataAdapter("SELECT * FROM TipoAsuntos", conexion)
+            dat.Fill(dt)
+
+            cmboxTipoAsunto.DataSource = dt
+            cmboxTipoAsunto.DisplayMember = "TipoAsunto"
+            cmboxTipoAsunto.ValueMember = "id"
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+#End Region
+
+#Region "LLenar ComboBox Estado BD"
+    Sub LLenarEstado()
+
+        Dim dt = New DataTable
+        Dim dat = New SqlDataAdapter
+        Try
+            dat = New SqlDataAdapter("SELECT * FROM estados", conexion)
+            dat.Fill(dt)
+
+            cmboxEstado.DataSource = dt
+            cmboxEstado.DisplayMember = "estado"
+            cmboxEstado.ValueMember = "id"
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+#End Region
+
+#Region "LLenar ComboBox Procurador BD"
+    Sub LLenarProcurador()
+
+        Dim dt = New DataTable
+        Dim dat = New SqlDataAdapter
+        Try
+            dat = New SqlDataAdapter("SELECT * FROM Procurador", conexion)
+            dat.Fill(dt)
+
+            cmbBoxProcurador.DataSource = dt
+            cmbBoxProcurador.DisplayMember = "nombre"
+            cmbBoxProcurador.ValueMember = "DNI"
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+
+#End Region
 
 End Class
