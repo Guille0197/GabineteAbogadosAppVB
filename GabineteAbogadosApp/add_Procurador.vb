@@ -5,7 +5,7 @@ Imports System.Data.SqlClient.SqlCommand
 Imports System.Data.SqlClient.SqlDataReader
 
 Public Class add_Procurador
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click, PictureBox1.Click
         Me.Close()
         index.Show()
     End Sub
@@ -40,7 +40,7 @@ Public Class add_Procurador
                 MsgBox("Para registar ingrese los datos en los campos requeridos")
             Else
                 sqlquery = "INSERT INTO Procurador (DNI, nombre, email, telefono)
-                VALUES('" & txt_cedula.Text & "', '" & txt_nombre.Text & "', '" & txt_email.Text & ", '" & txt_telefono.Text & "' ')"
+                VALUES('" & txt_cedula.Text & "', '" & txt_nombre.Text & "', '" & txt_email.Text & "', '" & txt_telefono.Text & "')"
 
                 commando = New SqlCommand(sqlquery, conexion)
                 commando.ExecuteNonQuery() ' Actualiza la BD

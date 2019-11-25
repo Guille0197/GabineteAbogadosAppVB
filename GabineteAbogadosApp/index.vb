@@ -36,10 +36,14 @@
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-        Me.Show()
+        openChildForm(New list_Asuntos())
     End Sub
 
     Private Sub btnAddProcurador_Click(sender As Object, e As EventArgs) Handles btnAddProcurador.Click
         openChildForm(New add_Procurador())
+    End Sub
+
+    Private Sub btnEditAsunto_Click(sender As Object, e As EventArgs) Handles btnEditAsunto.Click
+        openChildForm(New editAsuntoCliente())
     End Sub
 End Class

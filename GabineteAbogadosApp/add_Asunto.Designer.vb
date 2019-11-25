@@ -40,11 +40,9 @@ Partial Class add_Asunto
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -181,11 +179,9 @@ Partial Class add_Asunto
         Me.GroupBox3.Controls.Add(Me.TextBox5)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.TextBox4)
-        Me.GroupBox3.Controls.Add(Me.TextBox3)
         Me.GroupBox3.Controls.Add(Me.TextBox2)
         Me.GroupBox3.Controls.Add(Me.TextBox1)
         Me.GroupBox3.Controls.Add(Me.Label4)
-        Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -202,7 +198,7 @@ Partial Class add_Asunto
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = Global.GabineteAbogadosApp.My.Resources.Resources.close
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(315, 159)
+        Me.Button2.Location = New System.Drawing.Point(343, 164)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(161, 62)
         Me.Button2.TabIndex = 29
@@ -213,7 +209,7 @@ Partial Class add_Asunto
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(409, 123)
+        Me.TextBox6.Location = New System.Drawing.Point(409, 74)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(174, 30)
         Me.TextBox6.TabIndex = 27
@@ -222,7 +218,7 @@ Partial Class add_Asunto
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(311, 126)
+        Me.Label11.Location = New System.Drawing.Point(311, 77)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(64, 23)
         Me.Label11.TabIndex = 26
@@ -234,7 +230,7 @@ Partial Class add_Asunto
         Me.btnRegistro.ForeColor = System.Drawing.Color.White
         Me.btnRegistro.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_add_file_32px_1
         Me.btnRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegistro.Location = New System.Drawing.Point(148, 159)
+        Me.btnRegistro.Location = New System.Drawing.Point(150, 164)
         Me.btnRegistro.Name = "btnRegistro"
         Me.btnRegistro.Size = New System.Drawing.Size(161, 62)
         Me.btnRegistro.TabIndex = 28
@@ -247,7 +243,7 @@ Partial Class add_Asunto
         Me.TextBox5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.Location = New System.Drawing.Point(125, 123)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(172, 30)
+        Me.TextBox5.Size = New System.Drawing.Size(174, 30)
         Me.TextBox5.TabIndex = 25
         '
         'Label10
@@ -263,23 +259,15 @@ Partial Class add_Asunto
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(409, 80)
+        Me.TextBox4.Location = New System.Drawing.Point(409, 31)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(174, 30)
         Me.TextBox4.TabIndex = 23
         '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(125, 77)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(172, 30)
-        Me.TextBox3.TabIndex = 22
-        '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(409, 31)
+        Me.TextBox2.Location = New System.Drawing.Point(125, 80)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(174, 30)
         Me.TextBox2.TabIndex = 21
@@ -289,34 +277,24 @@ Partial Class add_Asunto
         Me.TextBox1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(125, 30)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(172, 30)
+        Me.TextBox1.Size = New System.Drawing.Size(174, 30)
         Me.TextBox1.TabIndex = 20
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(311, 80)
+        Me.Label4.Location = New System.Drawing.Point(311, 31)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(97, 23)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Dirección:"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 77)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 23)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Apellido:"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(311, 34)
+        Me.Label2.Location = New System.Drawing.Point(6, 77)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 23)
         Me.Label2.TabIndex = 17
@@ -495,11 +473,9 @@ Partial Class add_Asunto
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox4 As GroupBox

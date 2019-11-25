@@ -24,12 +24,12 @@ Public Class add_Asunto
         Dim commandos As New SqlCommand
 
         Try
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Then
+            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Then
                 MsgBox("Para registar ingrese los datos en los campos requeridos")
             Else
                 'Registra el cliente
-                sqlquery = "INSERT INTO Cliente (cedula, nombre, apellido, direccion, telefono, email, codASunto)
-                VALUES('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "', '" & TextBox6.Text & "', '" & txtCodigo.Text & "')"
+                sqlquery = "INSERT INTO Cliente (cedula, nombre, direccion, telefono, email, codASunto)
+                VALUES('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "', '" & TextBox6.Text & "', '" & txtCodigo.Text & "')"
 
                 commando = New SqlCommand(sqlquery, conexion)
                 commando.ExecuteNonQuery()
@@ -37,7 +37,6 @@ Public Class add_Asunto
                 'Registra el asunto
                 sqlquerys = "INSERT INTO Asunto (CodigoExpediente, estado, fechaInicio, fechaFin, cliente, procurador, tipoAsunto)
                 VALUES('" & txtCodigo.Text & "', '" & cmboxEstado.Text & "', '" & dateInicio.Text & "', '" & dateFin.Text & "', '" & TextBox1.Text & "', '" & cmbBoxProcurador.Text & "', '" & cmboxTipoAsunto.Text & "')"
-
                 commandos = New SqlCommand(sqlquerys, conexion)
                 commandos.ExecuteNonQuery()
 
@@ -49,7 +48,6 @@ Public Class add_Asunto
                 'Limpiando
                 TextBox1.Clear()
                 TextBox2.Clear()
-                TextBox3.Clear()
                 TextBox4.Clear()
                 TextBox5.Clear()
                 TextBox6.Clear()
