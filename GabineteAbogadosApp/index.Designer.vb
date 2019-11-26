@@ -23,30 +23,30 @@ Partial Class index
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuVertical = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BarraTitulo = New System.Windows.Forms.Panel()
-        Me.PanelContenedor = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.BtnMini = New System.Windows.Forms.PictureBox()
-        Me.btnClose = New System.Windows.Forms.PictureBox()
         Me.BtnListAsuntos = New System.Windows.Forms.Button()
         Me.btnAddProcurador = New System.Windows.Forms.Button()
         Me.btnEditAsunto = New System.Windows.Forms.Button()
         Me.btnAddAsunto = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BarraTitulo = New System.Windows.Forms.Panel()
+        Me.BtnMini = New System.Windows.Forms.PictureBox()
+        Me.btnClose = New System.Windows.Forms.PictureBox()
+        Me.PanelContenedor = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.MenuVertical.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraTitulo.SuspendLayout()
-        Me.PanelContenedor.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnMini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelContenedor.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuVertical
@@ -62,6 +62,16 @@ Partial Class index
         Me.MenuVertical.Size = New System.Drawing.Size(250, 650)
         Me.MenuVertical.TabIndex = 0
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label2.Location = New System.Drawing.Point(3, 630)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 17)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "V1.0.0"
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -73,79 +83,6 @@ Partial Class index
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(261, 368)
         Me.Panel2.TabIndex = 6
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(256, 210)
-        Me.Panel1.TabIndex = 0
-        '
-        'BarraTitulo
-        '
-        Me.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BarraTitulo.Controls.Add(Me.BtnMini)
-        Me.BarraTitulo.Controls.Add(Me.btnClose)
-        Me.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BarraTitulo.Location = New System.Drawing.Point(250, 0)
-        Me.BarraTitulo.Name = "BarraTitulo"
-        Me.BarraTitulo.Size = New System.Drawing.Size(1050, 50)
-        Me.BarraTitulo.TabIndex = 1
-        '
-        'PanelContenedor
-        '
-        Me.PanelContenedor.Controls.Add(Me.Label1)
-        Me.PanelContenedor.Controls.Add(Me.PictureBox2)
-        Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContenedor.Location = New System.Drawing.Point(250, 50)
-        Me.PanelContenedor.Name = "PanelContenedor"
-        Me.PanelContenedor.Size = New System.Drawing.Size(1050, 600)
-        Me.PanelContenedor.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(334, 39)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(368, 55)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "BIENVENDIDO"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Image = Global.GabineteAbogadosApp.My.Resources.Resources.William_George
-        Me.PictureBox2.Location = New System.Drawing.Point(289, 97)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(473, 456)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'BtnMini
-        '
-        Me.BtnMini.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnMini.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_minimize_window_24px_1
-        Me.BtnMini.Location = New System.Drawing.Point(965, 7)
-        Me.BtnMini.Name = "BtnMini"
-        Me.BtnMini.Size = New System.Drawing.Size(37, 28)
-        Me.BtnMini.TabIndex = 1
-        Me.BtnMini.TabStop = False
-        '
-        'btnClose
-        '
-        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClose.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_close_window_24px_3
-        Me.btnClose.Location = New System.Drawing.Point(1008, 7)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(37, 28)
-        Me.btnClose.TabIndex = 0
-        Me.btnClose.TabStop = False
         '
         'BtnListAsuntos
         '
@@ -222,25 +159,88 @@ Partial Class index
         Me.btnHome.Text = "Inicio"
         Me.btnHome.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(256, 210)
+        Me.Panel1.TabIndex = 0
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.GabineteAbogadosApp.My.Resources.Resources.William_George
-        Me.PictureBox1.Location = New System.Drawing.Point(25, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 6)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(202, 184)
+        Me.PictureBox1.Size = New System.Drawing.Size(238, 195)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Label2
+        'BarraTitulo
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(3, 630)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 17)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "V1.0.0"
+        Me.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BarraTitulo.Controls.Add(Me.BtnMini)
+        Me.BarraTitulo.Controls.Add(Me.btnClose)
+        Me.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BarraTitulo.Location = New System.Drawing.Point(250, 0)
+        Me.BarraTitulo.Name = "BarraTitulo"
+        Me.BarraTitulo.Size = New System.Drawing.Size(1050, 50)
+        Me.BarraTitulo.TabIndex = 1
+        '
+        'BtnMini
+        '
+        Me.BtnMini.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnMini.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_minimize_window_24px_1
+        Me.BtnMini.Location = New System.Drawing.Point(965, 7)
+        Me.BtnMini.Name = "BtnMini"
+        Me.BtnMini.Size = New System.Drawing.Size(37, 28)
+        Me.BtnMini.TabIndex = 1
+        Me.BtnMini.TabStop = False
+        '
+        'btnClose
+        '
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_close_window_24px_3
+        Me.btnClose.Location = New System.Drawing.Point(1008, 7)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(37, 28)
+        Me.btnClose.TabIndex = 0
+        Me.btnClose.TabStop = False
+        '
+        'PanelContenedor
+        '
+        Me.PanelContenedor.Controls.Add(Me.Label1)
+        Me.PanelContenedor.Controls.Add(Me.PictureBox2)
+        Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelContenedor.Location = New System.Drawing.Point(250, 50)
+        Me.PanelContenedor.Name = "PanelContenedor"
+        Me.PanelContenedor.Size = New System.Drawing.Size(1050, 600)
+        Me.PanelContenedor.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(334, 39)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(368, 55)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "BIENVENDIDO"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Image = Global.GabineteAbogadosApp.My.Resources.Resources.William_George
+        Me.PictureBox2.Location = New System.Drawing.Point(289, 97)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(473, 456)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
         '
         'index
         '
@@ -258,13 +258,13 @@ Partial Class index
         Me.MenuVertical.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BarraTitulo.ResumeLayout(False)
+        CType(Me.BtnMini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelContenedor.ResumeLayout(False)
         Me.PanelContenedor.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BtnMini, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

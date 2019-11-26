@@ -10,14 +10,11 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub BarraTitulo_Paint(sender As Object, e As PaintEventArgs) Handles BarraTitulo.Paint
-
-    End Sub
-
     Private Sub BtnAsuntos_Click(sender As Object, e As EventArgs) Handles BtnListAsuntos.Click
         openChildForm(New list_Asuntos())
     End Sub
 
+    'Inserta el nuevo form en el panel contenedor del index 
     Private currentForm As Form = Nothing
     Private Sub openChildForm(childForm As Form)
         If currentForm IsNot Nothing Then currentForm.Close()
@@ -32,7 +29,7 @@
     End Sub
 
     Private Sub btnAddAsunto_Click(sender As Object, e As EventArgs) Handles btnAddAsunto.Click
-        openChildForm(New add_Asunto())
+        openChildForm(New add_Asunto()) 'Se muestra el form add_Asunto dentro del panelContenedor del index
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
