@@ -53,8 +53,15 @@ Public Class add_Asunto
                 TextBox6.Clear()
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
-            'MsgBox("El codigo ya existe")
+            'MsgBox(ex.Message)
+            MsgBox("ERROR: Número de cedula ya registrada, intente nuevamente")
+
+            'Limpiar
+            TextBox1.Clear()
+            TextBox2.Clear()
+            TextBox4.Clear()
+            TextBox5.Clear()
+            TextBox6.Clear()
         End Try
     End Sub
 

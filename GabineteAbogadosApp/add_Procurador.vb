@@ -61,8 +61,13 @@ Public Class add_Procurador
 
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
-            'MsgBox("La cedula ya existe")
+            'MsgBox(ex.Message)
+            MsgBox("ERROR: Número de cedula ya esta registrada, intente nuevamente")
+            'Limpiando
+            txtCedula.Clear()
+            txtNombre.Clear()
+            txtTelefono.Clear()
+            txtEmail.Clear()
         End Try
     End Sub
 
