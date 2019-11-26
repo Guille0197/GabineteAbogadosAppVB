@@ -24,21 +24,23 @@ Partial Class editAsuntoCliente
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtCedula = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.btnConsultar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dateFin = New System.Windows.Forms.DateTimePicker()
@@ -60,8 +62,7 @@ Partial Class editAsuntoCliente
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnActualizarAsunto = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -83,34 +84,70 @@ Partial Class editAsuntoCliente
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.txtTelefono)
         Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
+        Me.GroupBox2.Controls.Add(Me.txtEmail)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtCodigo)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.txtCedula)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txtDireccion)
+        Me.GroupBox2.Controls.Add(Me.txtNombre)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(22, 54)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(530, 171)
+        Me.GroupBox2.Size = New System.Drawing.Size(452, 268)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos personales"
         '
-        'TextBox1
+        'txtTelefono
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(165, 23)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(112, 30)
-        Me.TextBox1.TabIndex = 38
+        Me.txtTelefono.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(120, 232)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(304, 30)
+        Me.txtTelefono.TabIndex = 42
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(15, 232)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(78, 24)
+        Me.Label11.TabIndex = 41
+        Me.Label11.Text = "Telefono:"
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(120, 194)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(304, 30)
+        Me.txtEmail.TabIndex = 40
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(132, 44)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "Código " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de expediente:"
+        '
+        'txtCodigo
+        '
+        Me.txtCodigo.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigo.Location = New System.Drawing.Point(165, 23)
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Size = New System.Drawing.Size(259, 30)
+        Me.txtCodigo.TabIndex = 38
         '
         'Label7
         '
@@ -126,37 +163,45 @@ Partial Class editAsuntoCliente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(283, 75)
+        Me.Label6.Location = New System.Drawing.Point(15, 194)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 24)
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "Email:"
         '
-        'TextBox2
+        'txtCedula
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(120, 75)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(155, 30)
-        Me.TextBox2.TabIndex = 33
+        Me.txtCedula.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCedula.Location = New System.Drawing.Point(120, 75)
+        Me.txtCedula.Name = "txtCedula"
+        Me.txtCedula.Size = New System.Drawing.Size(302, 30)
+        Me.txtCedula.TabIndex = 33
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(277, 35)
+        Me.Label8.Location = New System.Drawing.Point(15, 161)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(78, 24)
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Direccón:"
         '
-        'TextBox3
+        'txtDireccion
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(120, 118)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(155, 30)
-        Me.TextBox3.TabIndex = 30
+        Me.txtDireccion.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Location = New System.Drawing.Point(120, 154)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(302, 30)
+        Me.txtDireccion.TabIndex = 22
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(120, 118)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(302, 30)
+        Me.txtNombre.TabIndex = 30
         '
         'Label9
         '
@@ -167,14 +212,6 @@ Partial Class editAsuntoCliente
         Me.Label9.Size = New System.Drawing.Size(74, 24)
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Nombre:"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(367, 28)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(145, 30)
-        Me.TextBox4.TabIndex = 22
         '
         'Label12
         '
@@ -193,9 +230,9 @@ Partial Class editAsuntoCliente
         Me.btnConsultar.ForeColor = System.Drawing.Color.White
         Me.btnConsultar.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_search_32px
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(574, 65)
+        Me.btnConsultar.Location = New System.Drawing.Point(22, 329)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(145, 62)
+        Me.btnConsultar.Size = New System.Drawing.Size(132, 55)
         Me.btnConsultar.TabIndex = 42
         Me.btnConsultar.Text = "BUSCAR"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -208,9 +245,9 @@ Partial Class editAsuntoCliente
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
         Me.btnEliminar.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_delete_32px
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(892, 65)
+        Me.btnEliminar.Location = New System.Drawing.Point(334, 328)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(140, 62)
+        Me.btnEliminar.Size = New System.Drawing.Size(140, 55)
         Me.btnEliminar.TabIndex = 40
         Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -223,9 +260,9 @@ Partial Class editAsuntoCliente
         Me.btnActualizar.ForeColor = System.Drawing.Color.White
         Me.btnActualizar.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_update_left_rotation_filled_32px
         Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnActualizar.Location = New System.Drawing.Point(724, 65)
+        Me.btnActualizar.Location = New System.Drawing.Point(160, 328)
         Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(165, 62)
+        Me.btnActualizar.Size = New System.Drawing.Size(168, 55)
         Me.btnActualizar.TabIndex = 39
         Me.btnActualizar.Text = "ACTUALIZAR"
         Me.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -235,29 +272,11 @@ Partial Class editAsuntoCliente
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(324, 9)
+        Me.Label2.Location = New System.Drawing.Point(300, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(378, 38)
+        Me.Label2.Size = New System.Drawing.Size(386, 38)
         Me.Label2.TabIndex = 43
-        Me.Label2.Text = "Editar Asunto - Cliente"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 44)
-        Me.Label1.TabIndex = 39
-        Me.Label1.Text = "Código " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de expediente:"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(367, 75)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(145, 30)
-        Me.TextBox5.TabIndex = 40
+        Me.Label2.Text = "Editar Cliente - Asunto " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'GroupBox1
         '
@@ -266,7 +285,7 @@ Partial Class editAsuntoCliente
         Me.GroupBox1.Controls.Add(Me.dateInicio)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 231)
+        Me.GroupBox1.Location = New System.Drawing.Point(480, 50)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(540, 93)
         Me.GroupBox1.TabIndex = 44
@@ -326,7 +345,7 @@ Partial Class editAsuntoCliente
         Me.GroupBox5.Controls.Add(Me.cmbBoxProcurador)
         Me.GroupBox5.Controls.Add(Me.Label4)
         Me.GroupBox5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(12, 467)
+        Me.GroupBox5.Location = New System.Drawing.Point(480, 286)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(540, 65)
         Me.GroupBox5.TabIndex = 46
@@ -359,7 +378,7 @@ Partial Class editAsuntoCliente
         Me.GroupBox4.Controls.Add(Me.cmboxTipoAsunto)
         Me.GroupBox4.Controls.Add(Me.Label13)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 326)
+        Me.GroupBox4.Location = New System.Drawing.Point(480, 145)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(540, 64)
         Me.GroupBox4.TabIndex = 47
@@ -382,7 +401,7 @@ Partial Class editAsuntoCliente
         Me.GroupBox3.Controls.Add(Me.cmboxEstado)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 396)
+        Me.GroupBox3.Location = New System.Drawing.Point(480, 215)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(540, 65)
         Me.GroupBox3.TabIndex = 45
@@ -416,11 +435,11 @@ Partial Class editAsuntoCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.DataGridViewClientes.Location = New System.Drawing.Point(574, 133)
+        Me.DataGridViewClientes.Location = New System.Drawing.Point(22, 411)
         Me.DataGridViewClientes.Name = "DataGridViewClientes"
         Me.DataGridViewClientes.RowHeadersWidth = 51
         Me.DataGridViewClientes.RowTemplate.Height = 24
-        Me.DataGridViewClientes.Size = New System.Drawing.Size(446, 408)
+        Me.DataGridViewClientes.Size = New System.Drawing.Size(998, 219)
         Me.DataGridViewClientes.TabIndex = 48
         '
         'Column6
@@ -465,29 +484,27 @@ Partial Class editAsuntoCliente
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 125
         '
-        'TextBox6
+        'btnActualizarAsunto
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(367, 118)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(145, 30)
-        Me.TextBox6.TabIndex = 42
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(283, 118)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(78, 24)
-        Me.Label11.TabIndex = 41
-        Me.Label11.Text = "Telefono:"
+        Me.btnActualizarAsunto.BackColor = System.Drawing.Color.DodgerBlue
+        Me.btnActualizarAsunto.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnActualizarAsunto.ForeColor = System.Drawing.Color.White
+        Me.btnActualizarAsunto.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_update_left_rotation_filled_32px
+        Me.btnActualizarAsunto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnActualizarAsunto.Location = New System.Drawing.Point(693, 357)
+        Me.btnActualizarAsunto.Name = "btnActualizarAsunto"
+        Me.btnActualizarAsunto.Size = New System.Drawing.Size(168, 48)
+        Me.btnActualizarAsunto.TabIndex = 49
+        Me.btnActualizarAsunto.Text = "ACTUALIZAR"
+        Me.btnActualizarAsunto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnActualizarAsunto.UseVisualStyleBackColor = False
         '
         'editAsuntoCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1032, 553)
+        Me.ClientSize = New System.Drawing.Size(1032, 642)
+        Me.Controls.Add(Me.btnActualizarAsunto)
         Me.Controls.Add(Me.DataGridViewClientes)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox5)
@@ -495,10 +512,10 @@ Partial Class editAsuntoCliente
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnActualizar)
         Me.Name = "editAsuntoCliente"
         Me.Text = "editAsuntoCliente"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -520,21 +537,21 @@ Partial Class editAsuntoCliente
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCodigo As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtCedula As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtDireccion As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents btnConsultar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnActualizar As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents dateFin As DateTimePicker
@@ -556,6 +573,7 @@ Partial Class editAsuntoCliente
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents btnActualizarAsunto As Button
 End Class

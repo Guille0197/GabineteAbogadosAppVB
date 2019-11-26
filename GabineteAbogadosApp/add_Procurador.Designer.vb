@@ -44,18 +44,16 @@ Partial Class add_Procurador
         Me.btnConsultar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
-        Me.LIMPIAR = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.PictureBox()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtCedula = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewProcurador, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -295,21 +293,6 @@ Partial Class add_Procurador
         Me.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnActualizar.UseVisualStyleBackColor = False
         '
-        'LIMPIAR
-        '
-        Me.LIMPIAR.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.LIMPIAR.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LIMPIAR.ForeColor = System.Drawing.Color.White
-        Me.LIMPIAR.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_broom_filled_32px
-        Me.LIMPIAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LIMPIAR.Location = New System.Drawing.Point(895, 231)
-        Me.LIMPIAR.Name = "LIMPIAR"
-        Me.LIMPIAR.Size = New System.Drawing.Size(125, 59)
-        Me.LIMPIAR.TabIndex = 29
-        Me.LIMPIAR.Text = "LIMPIAR"
-        Me.LIMPIAR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LIMPIAR.UseVisualStyleBackColor = False
-        '
         'btnClose
         '
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
@@ -320,32 +303,16 @@ Partial Class add_Procurador
         Me.btnClose.TabIndex = 6
         Me.btnClose.TabStop = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_visible_32px
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(895, 172)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 50)
-        Me.Button4.TabIndex = 39
-        Me.Button4.Text = "VER"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtEmail)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.txtTelefono)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txtNombre)
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.txtCedula)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 45)
@@ -355,13 +322,13 @@ Partial Class add_Procurador
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos personales"
         '
-        'TextBox1
+        'txtEmail
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(125, 121)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(341, 30)
-        Me.TextBox1.TabIndex = 38
+        Me.txtEmail.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(125, 121)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(341, 30)
+        Me.txtEmail.TabIndex = 38
         '
         'Label6
         '
@@ -383,13 +350,13 @@ Partial Class add_Procurador
         Me.Label7.TabIndex = 36
         Me.Label7.Text = "Completo"
         '
-        'TextBox2
+        'txtTelefono
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(125, 166)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(341, 30)
-        Me.TextBox2.TabIndex = 33
+        Me.txtTelefono.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(125, 166)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(341, 30)
+        Me.txtTelefono.TabIndex = 33
         '
         'Label8
         '
@@ -401,13 +368,13 @@ Partial Class add_Procurador
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Teléfono:"
         '
-        'TextBox3
+        'txtNombre
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(125, 77)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(341, 30)
-        Me.TextBox3.TabIndex = 30
+        Me.txtNombre.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(125, 77)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(341, 30)
+        Me.txtNombre.TabIndex = 30
         '
         'Label9
         '
@@ -419,13 +386,13 @@ Partial Class add_Procurador
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Nombre:"
         '
-        'TextBox4
+        'txtCedula
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(125, 32)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(341, 30)
-        Me.TextBox4.TabIndex = 22
+        Me.txtCedula.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCedula.Location = New System.Drawing.Point(125, 32)
+        Me.txtCedula.Name = "txtCedula"
+        Me.txtCedula.Size = New System.Drawing.Size(341, 30)
+        Me.txtCedula.TabIndex = 22
         '
         'Label12
         '
@@ -452,12 +419,10 @@ Partial Class add_Procurador
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1032, 607)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.BtnAdd_Procurador)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnActualizar)
-        Me.Controls.Add(Me.LIMPIAR)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -490,12 +455,10 @@ Partial Class add_Procurador
     Friend WithEvents Label10 As Label
     Friend WithEvents txt_nombre As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents LIMPIAR As Button
     Friend WithEvents BtnAdd_Procurador As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnActualizar As Button
     Friend WithEvents btnConsultar As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents txt_email As TextBox
     Friend WithEvents Label11 As Label
@@ -505,14 +468,14 @@ Partial Class add_Procurador
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtCedula As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -36,7 +36,7 @@
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-        openChildForm(New list_Asuntos())
+        openChildForm(New inicio())
     End Sub
 
     Private Sub btnAddProcurador_Click(sender As Object, e As EventArgs) Handles btnAddProcurador.Click
@@ -45,5 +45,9 @@
 
     Private Sub btnEditAsunto_Click(sender As Object, e As EventArgs) Handles btnEditAsunto.Click
         openChildForm(New editAsuntoCliente())
+    End Sub
+
+    Private Sub PanelContenedor_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedor.Paint
+
     End Sub
 End Class

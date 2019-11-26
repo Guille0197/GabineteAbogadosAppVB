@@ -44,16 +44,11 @@ Public Class FormLogin
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim sqlquery As String 'cadena sentencia SQL 
-        Dim commando As New SqlCommand  'objeto de comando 
-        Dim data As SqlDataReader 'objeto de lectura
         Dim LoginName As String = "admin"
+        Dim pass As String = "123"
         Try
-            'sqlquery = "SELECT * FROM Procurador WHERE LoginName='" & txtUser.Text & "' AND Password='" & txtPass.Text & "' "
-            'commando = New SqlCommand(sqlquery, conexion)
-            'data = commando.ExecuteReader
 
-            If 1 Then
+            If LoginName = txtUser.Text And pass = txtPass.Text Then
                 index.Show()
                 Me.Hide()
             Else

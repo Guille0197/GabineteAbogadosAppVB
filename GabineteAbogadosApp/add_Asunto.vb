@@ -36,7 +36,7 @@ Public Class add_Asunto
 
                 'Registra el asunto
                 sqlquerys = "INSERT INTO Asunto (CodigoExpediente, estado, fechaInicio, fechaFin, cliente, procurador, tipoAsunto)
-                VALUES('" & txtCodigo.Text & "', '" & cmboxEstado.Text & "', '" & dateInicio.Text & "', '" & dateFin.Text & "', '" & TextBox1.Text & "', '" & cmbBoxProcurador.Text & "', '" & cmboxTipoAsunto.Text & "')"
+                VALUES('" & txtCodigo.Text & "', '" & cmboxEstado.Text & "', '" & dateInicio.Text & "', '" & dateFin.Text & "', '" & TextBox2.Text & "', '" & cmbBoxProcurador.Text & "', '" & cmboxTipoAsunto.Text & "')"
                 commandos = New SqlCommand(sqlquerys, conexion)
                 commandos.ExecuteNonQuery()
 
@@ -123,7 +123,6 @@ Public Class add_Asunto
             MsgBox(ex.Message)
         End Try
     End Sub
-
 
 #End Region
 

@@ -11,7 +11,10 @@ Public Class add_Procurador
     End Sub
 
     Private Sub add_Procurador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LlenarProcurador()
+    End Sub
 #Region "LLenar Grid Procurador"
+    Sub LlenarProcurador()
         Dim sqlquery As String 'cadena sentencia sql
         Dim commando As New SqlCommand 'objeto de comando
         Dim data As SqlDataReader ' objeto de lectura
@@ -36,21 +39,24 @@ Public Class add_Procurador
         Dim commando As New SqlCommand 'Objeto de comando
 
         Try
-            If txt_cedula.Text = "" Or txt_nombre.Text = "" Or txt_email.Text = "" Or txt_telefono.Text = "" Then
+            If txtCedula.Text = "" Or txtNombre.Text = "" Or txtEmail.Text = "" Or txtTelefono.Text = "" Then
                 MsgBox("Para registar ingrese los datos en los campos requeridos")
             Else
                 sqlquery = "INSERT INTO Procurador (DNI, nombre, email, telefono)
-                VALUES('" & txt_cedula.Text & "', '" & txt_nombre.Text & "', '" & txt_email.Text & "', '" & txt_telefono.Text & "')"
+                VALUES('" & txtCedula.Text & "', '" & txtNombre.Text & "', '" & txtEmail.Text & "', '" & txtTelefono.Text & "')"
 
                 commando = New SqlCommand(sqlquery, conexion)
                 commando.ExecuteNonQuery() ' Actualiza la BD
                 MsgBox("Agregando procurador...")
+                DataGridViewProcurador.Rows.Clear()
+                LlenarProcurador()
+
 
                 'Limpiando
-                txt_cedula.Clear()
-                txt_nombre.Clear()
-                txt_telefono.Clear()
-                txt_email.Clear()
+                txtCedula.Clear()
+                txtNombre.Clear()
+                txtTelefono.Clear()
+                txtEmail.Clear()
 
             End If
         Catch ex As Exception
@@ -59,7 +65,7 @@ Public Class add_Procurador
         End Try
     End Sub
 
-    Private Sub LIMPIAR_Click(sender As Object, e As EventArgs) Handles LIMPIAR.Click
+    Private Sub LIMPIAR_Click(sender As Object, e As EventArgs)
         DataGridViewProcurador.Rows().Clear()
 
     End Sub
@@ -70,18 +76,18 @@ Public Class add_Procurador
         Dim commando As New SqlCommand 'Objeto de comando
         Dim sqlquery As String 'cadena sentencia sql
         Try
-            If txt_cedula.Text = "" Then
+            If txtCedula.Text = "" Then
                 MsgBox("Para Consultar ingrese el número de cédula en el campo requerido")
             End If
-            sqlquery = "SELECT * FROM Procurador WHERE DNI = '" & txt_cedula.Text & "' "
+            sqlquery = "SELECT * FROM Procurador WHERE DNI = '" & txtCedula.Text & "' "
             commando = New SqlCommand(sqlquery, conexion)
             data = commando.ExecuteReader
             data.Read()
 
-            txt_cedula.Text = data("DNI")
-            txt_nombre.Text = data("nombre")
-            txt_telefono.Text = data("telefono")
-            txt_email.Text = data("email")
+            txtCedula.Text = data("DNI")
+            txtNombre.Text = data("nombre")
+            txtTelefono.Text = data("telefono")
+            txtEmail.Text = data("email")
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -96,22 +102,24 @@ Public Class add_Procurador
         Dim sqlquery As String 'cadena sentencia sql
 
         Try
-            If txt_cedula.Text = "" Then
+            If txtCedula.Text = "" Then
                 MsgBox("Para eliminar ingrese el número de cédula en el campo requerido")
 
             ElseIf MessageBox.Show("¿Esta seguro que quiere eliminarlo?", "Advertencia",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
 
-                sqlquery = "DELETE FROM Procurador WHERE DNI = '" & txt_cedula.Text & "' "
+                sqlquery = "DELETE FROM Procurador WHERE DNI = '" & txtCedula.Text & "' "
                 commando = New SqlCommand(sqlquery, conexion)
                 commando.ExecuteNonQuery() ' Actualiza la BD
                 MsgBox("Elimando...")
+                DataGridViewProcurador.Rows().Clear()
+                LlenarProcurador()
 
                 'Limpiando
-                txt_cedula.Clear()
-                txt_nombre.Clear()
-                txt_telefono.Clear()
-                txt_email.Clear()
+                txtCedula.Clear()
+                txtNombre.Clear()
+                txtTelefono.Clear()
+                txtEmail.Clear()
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -123,23 +131,25 @@ Public Class add_Procurador
         Dim sqlquery As String 'cadena sentencia sql
 
         Try
-            If txt_cedula.Text = "" Then
+            If txtCedula.Text = "" Then
                 MsgBox("Para actualizar ingrese el número de cédula en el campo requerido")
             Else
-                sqlquery = "UPDATE Procurador SET DNI = '" & txt_cedula.Text & "',
-                                         nombre = '" & txt_nombre.Text & "',
-                                         email = '" & txt_email.Text & "',
-                                         telefono = '" & txt_telefono.Text & "'
-                WHERE DNI = '" & txt_cedula.Text & "' "
+                sqlquery = "UPDATE Procurador SET DNI = '" & txtCedula.Text & "',
+                                         nombre = '" & txtNombre.Text & "',
+                                         email = '" & txtEmail.Text & "',
+                                         telefono = '" & txtTelefono.Text & "'
+                WHERE DNI = '" & txtCedula.Text & "' "
                 commando = New SqlCommand(sqlquery, conexion)
                 commando.ExecuteNonQuery() ' Actualiza la BD
                 MsgBox("Actualizando...")
+                DataGridViewProcurador.Rows().Clear()
+                LlenarProcurador()
 
                 'Limpiando
-                txt_cedula.Clear()
-                txt_nombre.Clear()
-                txt_telefono.Clear()
-                txt_email.Clear()
+                txtCedula.Clear()
+                txtNombre.Clear()
+                txtTelefono.Clear()
+                txtEmail.Clear()
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
