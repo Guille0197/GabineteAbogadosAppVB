@@ -284,5 +284,8 @@
   <ItemGroup>
     <None Include="Resources\icons8_edit_file_32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_logout_rounded_left_32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

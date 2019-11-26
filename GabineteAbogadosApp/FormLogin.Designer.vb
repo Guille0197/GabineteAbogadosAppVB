@@ -32,6 +32,7 @@ Partial Class FormLogin
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.titleBar.SuspendLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,12 +146,22 @@ Partial Class FormLogin
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(431, 623)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 34)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "admin " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "123"
+        '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(490, 680)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
@@ -183,4 +194,5 @@ Partial Class FormLogin
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnClose As PictureBox
     Friend WithEvents btnMinimize As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

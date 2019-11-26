@@ -10,6 +10,7 @@ Public Class editAsuntoCliente
         LLenarEstado() 'llenar comboBox de BD
         LLenarProcurador()
         LLenarClientes()
+        txtCodigo.Focus()
 
     End Sub
 

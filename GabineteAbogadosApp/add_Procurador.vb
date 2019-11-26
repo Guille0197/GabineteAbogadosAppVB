@@ -12,6 +12,7 @@ Public Class add_Procurador
 
     Private Sub add_Procurador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LlenarProcurador()
+        txtCedula.Focus()
     End Sub
 #Region "LLenar Grid Procurador"
     Sub LlenarProcurador()

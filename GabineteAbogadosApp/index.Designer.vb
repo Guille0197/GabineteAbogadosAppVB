@@ -25,6 +25,7 @@ Partial Class index
         Me.MenuVertical = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cerrarsesion = New System.Windows.Forms.Button()
         Me.BtnListAsuntos = New System.Windows.Forms.Button()
         Me.btnAddProcurador = New System.Windows.Forms.Button()
         Me.btnEditAsunto = New System.Windows.Forms.Button()
@@ -75,6 +76,7 @@ Partial Class index
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.cerrarsesion)
         Me.Panel2.Controls.Add(Me.BtnListAsuntos)
         Me.Panel2.Controls.Add(Me.btnAddProcurador)
         Me.Panel2.Controls.Add(Me.btnEditAsunto)
@@ -83,6 +85,21 @@ Partial Class index
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(261, 368)
         Me.Panel2.TabIndex = 6
+        '
+        'cerrarsesion
+        '
+        Me.cerrarsesion.FlatAppearance.BorderSize = 0
+        Me.cerrarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cerrarsesion.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cerrarsesion.ForeColor = System.Drawing.Color.White
+        Me.cerrarsesion.Image = Global.GabineteAbogadosApp.My.Resources.Resources.icons8_logout_rounded_left_32px
+        Me.cerrarsesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cerrarsesion.Location = New System.Drawing.Point(2, 325)
+        Me.cerrarsesion.Name = "cerrarsesion"
+        Me.cerrarsesion.Size = New System.Drawing.Size(250, 40)
+        Me.cerrarsesion.TabIndex = 6
+        Me.cerrarsesion.Text = "Cerrar Sesión"
+        Me.cerrarsesion.UseVisualStyleBackColor = True
         '
         'BtnListAsuntos
         '
@@ -285,4 +302,5 @@ Partial Class index
     Friend WithEvents btnAddProcurador As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
+    Friend WithEvents cerrarsesion As Button
 End Class

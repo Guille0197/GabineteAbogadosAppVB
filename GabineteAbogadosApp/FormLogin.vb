@@ -44,13 +44,15 @@ Public Class FormLogin
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim LoginName As String = "admin"
-        Dim pass As String = "123"
+        Dim LoginName As String = "admin" 'Nombre de usuario
+        Dim pass As String = "123" ' Contraseña
         Try
-
             If LoginName = txtUser.Text And pass = txtPass.Text Then
                 index.Show()
                 Me.Hide()
+                txtUser.Clear()
+                txtPass.Clear()
+
             Else
                 MsgBox("ERROR: USUARIO Y/O CONTRASEÑA INCORRECTA" + vbNewLine + "Intentelo nuevamente")
                 txtPass.Clear()

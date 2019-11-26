@@ -47,4 +47,12 @@
     Private Sub PanelContenedor_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedor.Paint
 
     End Sub
+
+    Private Sub cerrarsesion_Click(sender As Object, e As EventArgs) Handles cerrarsesion.Click
+        If MessageBox.Show("¿Esta seguro que quiere serrar sesión?", "Advertencia",
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Me.Close()
+            FormLogin.Show()
+        End If
+    End Sub
 End Class
